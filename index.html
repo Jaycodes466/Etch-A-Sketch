@@ -9,6 +9,46 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
+    <main>
+        <aside class="sidebar">
+          <h1 class="title">Etch-A-Sketch</h1>
+          <div class="buttons-container">
+            <button class="draw-btn">
+              <img
+                src="icons/pen-icon.svg"
+                alt="Pen Icon"
+                class="draw-icon"
+              />Draw
+            </button>
+            <button class="color-picker-btn">
+              <input
+                type="color"
+                id="head"
+                name="head"
+                value="#bbc6fb"
+                class="user-picks-color"
+              />
+              Select color
+            </button>
+            <button class="eraser-btn">
+              <img
+                src="icons/eraser-icon.svg"
+                alt="Eraser Icon"
+                class="eraser-icon"
+              />Eraser
+            </button>
+            <button class="reset-btn">
+              <img
+                src="icons/reset-icon.svg"
+                alt="Reset icon"
+                class="reset-icon"
+              />
+              Reset
+            </button>
+          </div>
+        </aside>
+        <section class="grid-container"></section>
+      </main>
     <script src="js/main.js"></script>
   </body>
 </html>
