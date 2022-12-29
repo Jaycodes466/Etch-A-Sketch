@@ -42,3 +42,35 @@ function hoverEffect() {
     });
   });
 }
+
+
+// Reset Grid function
+function resetGrid(){
+    const squares = document.querySelectorAll('.square');
+
+    squares.forEach(function (square){
+       square.style.backgroundColor = '#fff';
+    });
+}
+
+
+// Eraser function
+function eraser(){
+    const squares = document.querySelectorAll('.square');
+    squares.forEach(function (square) {
+        square.addEventListener('mouseover', () => {
+          square.style.backgroundColor = '#fff';
+        });
+      });
+}
+
+
+// Color Picker function
+
+
+// Event listeners
+resetBtn.addEventListener('click', resetGrid);
+
+eraserBtn.addEventListener('click', eraser);
+
+drawBtn.addEventListener('click', hoverEffect);
