@@ -4,6 +4,7 @@ const colorPickerInput = document.querySelector('.user-picks-color');
 const eraserBtn = document.querySelector('.eraser-btn');
 const resetBtn = document.querySelector('.reset-btn');
 
+
 // Creating dynamically sized grid from user input
 function loadGrid() {
   let gridSize = prompt(
@@ -65,7 +66,6 @@ function eraser(){
 }
 
 
-// Color Picker function
 
 
 // Event listeners
@@ -74,3 +74,14 @@ resetBtn.addEventListener('click', resetGrid);
 eraserBtn.addEventListener('click', eraser);
 
 drawBtn.addEventListener('click', hoverEffect);
+
+// Color Picker function / event listener
+colorPickerInput.addEventListener('input', function(e){
+    let userColor = this.value;
+    const squares = document.querySelectorAll('.square');
+    squares.forEach((square) => {
+      square.addEventListener('mouseover', function () {
+        square.style.backgroundColor = userColor;
+      });
+    });
+});
